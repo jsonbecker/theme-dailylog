@@ -1,0 +1,16 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Theme Dailylog"
+license = "MIT"
+licenselink = "https://github.com/jsonbecker/theme-dailylog/blob/master/LICENSE"
+description = "Simple theme designed around chronological within day posts."
+homepage = "http://github.com/jsonbecker/theme-dailylog"
+tags = ["minimal", "clean", "microdotblog"]
+features = ["Syntax highlighting", "blog"]
+min_version = "0.91.0"
+
+[author]
+  name = "Jason Becker"
+  homepage = "https://json.blog"
+

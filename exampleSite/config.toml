@@ -1,0 +1,48 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "theme-dailylog"
+themesdir="../.."
+theme = "theme-dailylog"
+paginate = 20
+author = "Jason Becker"
+
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+lineAnchors = ""
+lineNoStart = 1
+lineNos= true
+lineNumbersInTable= true
+noClasses= true
+style= "dracula"
+tabWidth= 4
+
+[params]
+twitter_username = "example"
+github_username = "example"
+instagram_username = "example" 
+bookshop_affiliate_id="0000"
+contact = "example"
+
+[[menu.main]]
+name = "Now"
+url = "/categories/now"
+weight = 1
+
+[[menu.main]]
+name = "Uses"
+url = "/uses"
+weight = 2
+
+[[menu.main]]
+name = "Archive"
+url = "/archive"
+weight = 4
+
+[[menu.main]]
+name = "Books"
+url = "/bookshelf"
+weight = 3
+

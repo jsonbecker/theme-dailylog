@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <div class="content list h-feed">
+    <div class="singlearea"> 
+    <h1 class = "p-name  post-title">
+      <a class= "u-url" href= "{{ .Permalink }}">
+        {{ if .Title }}
+        {{ .Title }}
+        {{ else }}
+        {{ .Date.Format "January 2, 2006" }}
+        {{ end }}
+      </a>
+    </h1>
+<time 
+class = "date dt-published" 
+datetime = "{{ .Date.Format "January 02, 2006 15:04:05  -0700" }}" >
+<a class = "u-url" href= "{{ .Permalink }}">
+{{ .Date.Format "3:04PM" }}
+</a>
+</time>
+
+    </div>
+<hr class="dateline" />
+<article class = "h-entry">
+      <div class = "post-content e-content">
+        {{ .Content }}
+      </div>
+    </article>
+ </div>
+{{ end }}
+

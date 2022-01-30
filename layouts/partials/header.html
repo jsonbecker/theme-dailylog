@@ -1,0 +1,19 @@
+<header class = "title-bar">
+  <nav>
+    <span class = "site-title"> 
+      <a href = "{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    </span>
+    <ul>
+     {{ range .Site.Menus.main }}
+			 <li>
+				 <a href="{{ .URL }}">{{ .Name }}</a>
+			 </li>
+		 {{ end }}
+     {{ if .Site.Params.Contact }}
+        <li>
+          <a href="mailto:{{ .Site.Params.Contact }}">Contact</a>
+        </li>
+     {{ end }}
+    </ul>
+  </nav>
+</header>
