@@ -21,6 +21,7 @@
     type="text/css"
     href="{{ .Site.BaseURL }}css/main.css"
   />
+
   {{- if isset .Site.Params "customcss" }}
     <link
       rel="stylesheet"
@@ -39,8 +40,16 @@
       <script src="{{ $.Site.BaseURL }}{{ . }}"></script>
     {{- end }}
 	{{- end }}
-  {{ if .RSSLink -}}
-    <link
+  <!-- RSS -->
+  {{ range .AlternativeOutputFormats }}
+  <link
+    rel="{{ .Rel }}"
+    type="{{ .MediaType.Type }}"
+    href="{{ .Permalink }}"
+    title="{{ site.Title }}"
+  />
+  {{ end }}
+<!--    <link
       href="{{ .RSSLink }}"
       rel="alternate"
       type="application/rss+xml"
@@ -63,8 +72,7 @@
       type="application/rsd+xml"
       href="{{ "rsd.xml" | absURL }}"
     />
-  {{ end }} 
-
+-->
   <!-- Identity -->
   <link
     rel="me"
