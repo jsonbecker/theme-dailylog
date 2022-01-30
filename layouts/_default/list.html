@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{$pages := where .Site.Pages "Type" "post" }}
+  {{ range $pages.GroupByDate "2006" }}
+        <div class="group">
+            <h2 class="key">
+                {{ .Key }}
+            </h2>
+            {{ range .Pages.GroupByDate "January" }}
+               <h3 class="key">
+                {{ .Key }}
+                </h3>
+             {{ range .Pages }}
+              {{ partial "li.html" . }}
+            {{ end }}
+   {{ end }}
+{{ end }}
+{{ end }}
