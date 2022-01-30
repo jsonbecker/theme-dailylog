@@ -4,7 +4,7 @@
   "title": "theme-dailylog",
   "themesdir": "../..",
   "theme": "theme-dailylog",
-  "paginate": 20,
+  "paginate": 5,
   "author": "Jason Becker",
 
   "markup": {

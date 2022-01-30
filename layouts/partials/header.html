@@ -4,18 +4,27 @@
       <a href = "{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </span>
     <ul>
-     {{ range $menuitem := .Site.Params.Menu }}
-			 <li>
-         <a href="{{ index $menuitem "url" }}">
-           {{ index $menuitem "name" }}
-         </a>
-			 </li>
-		 {{ end }}
-     {{ if .Site.Params.Contact }}
-        <li>
-          <a href="mailto:{{ .Site.Params.Contact }}">Contact</a>
-        </li>
-     {{ end }}
+    {{ $url := .RelPermalink }}
+    {{ range $menuitem := .Site.Params.Menu }}
+		  <li>
+        <a class="{{ if eq .URL $url }}active{{ end }}"
+           href="{{ index $menuitem "url" }}">
+          {{ index $menuitem "name" }}
+        </a>
+		  </li>
+		{{ end }}
+    {{ with site.Menus.main }}
+      {{ range . }}
+        <a class="{{ if eq .URL $url }}active{{ end }}" href="{{ .URL }}">
+          {{ .Name }}
+        </a>
+      {{ end }}
+    {{ end }}
+    {{ if .Site.Params.Contact }}
+       <li>
+         <a href="mailto:{{ .Site.Params.Contact }}">Contact</a>
+       </li>
+    {{ end }}
     </ul>
   </nav>
 </header>
