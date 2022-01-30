@@ -28,29 +28,23 @@
     "github_username": "example",
     "instagram_username": "example",
     "bookshop_affiliate_i": "0000",
-    "contact": "example"
-  },
-  "menu": {
-    "main": [
+    "contact": "example",
+    "menu": [
       {
         "name": "Now",
-        "url": "/categories/now",
-        "weight": 1
+        "url": "/categories/now"
       },
       {
         "name": "Uses",
-        "url": "/uses",
-        "weight": 2
+        "url": "/uses"
+      },
+      {
+        "name": "Books",
+        "url": "/bookshelf"
       },
       {
         "name": "Archive",
-        "url": "/archive",
-        "weight": 4
-      },
-      { 
-        "name": "Books",
-        "url": "/bookshelf", 
-        "weight": 3
+        "url": "/archive"
       }
     ]
   }

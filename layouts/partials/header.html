@@ -4,9 +4,11 @@
       <a href = "{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </span>
     <ul>
-     {{ range .Site.Menus.main }}
+     {{ range $menuitem := .Site.Params.Menu }}
 			 <li>
-				 <a href="{{ .URL }}">{{ .Name }}</a>
+         <a href="{{ index $menuitem "url" }}">
+           {{ index $menuitem "name" }}
+         </a>
 			 </li>
 		 {{ end }}
      {{ if .Site.Params.Contact }}
