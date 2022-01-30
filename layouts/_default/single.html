@@ -4,9 +4,9 @@
     <h1 class = "p-name  post-title">
       <a class= "u-url" href= "{{ .Permalink }}">
         {{ if .Title }}
-        {{ .Title }}
+          {{ .Title }}
         {{ else }}
-        {{ .Date.Format "January 2, 2006" }}
+          {{ .Date.Format "January 2, 2006" }}
         {{ end }}
       </a>
     </h1>
