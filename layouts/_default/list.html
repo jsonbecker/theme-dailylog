@@ -2,13 +2,14 @@
 {{$pages := where .Site.Pages "Type" "post" }}
   {{ range $pages.GroupByDate "2006" }}
     <div class="group">
-      <h2 class="key">
+      <h1 class="year">
         {{ .Key }}
-      </h2>
+      </h1>
+      <hr>
       {{ range .Pages.GroupByDate "January" }}
-        <h3 class="key">
+        <h2 class="month">
           {{ .Key }}
-        </h3>
+        </h2>
         {{ range .Pages }}
           {{ partial "li.html" . }}
         {{ end }}
