@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..700&family=Anonymous+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..700&display=swap');
 
 .bigfoot-footnote__content p {
     color: black;
@@ -12,52 +12,50 @@ body {
     background-color: #343837;
 }
 
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-
-.center {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 h2>a, h2>a:visited, h1>a, h1>a:visited {
     color: #00ef6f;
     text-decoration: none;
 }
 
-h1 {
+h1, h1>a {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #00ef6f;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     color: #00ef6f;
 }
 
 h3 {
     font-size: 1.375rem;
-    font-weight: 500;
+    font-weight: 400;
     color: #00ef6f;
+}
+
+h4 {
+    font-size: 1.125;
+    font-weight: 700;
+    color: #00ef6f;
+}
+
+pre {
+  color: #FFFFFF;
 }
 
 p, ul, ol {
     font-size: 1.125rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5;
-    color: #FFFFFF
+    color: #FFFFFF;
+    letter-spacing: 0.01rem; 
 }
 
 table {
-    color: #FFFFFF
+    color: #FFFFFF;
+    font-variant-numeric: tabular-nums;
 }
 
 hr {
@@ -94,6 +92,10 @@ nav>ul>li {
     margin: 0.25rem;
 }
 
+nav a {
+  font-weight: 400;
+} 
+
 .day:not(:first-child) {
   margin-top: 1.5rem;
 }
@@ -115,9 +117,8 @@ article h2:first-child {
 
 .dateheader {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 200;
     color: #00ef6f;
-    font-family: 'Manrope';
 }
 
 * {
@@ -127,7 +128,7 @@ article h2:first-child {
 
 a {
     color: #00d8fb;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 a:hover, a:visited {
@@ -136,20 +137,19 @@ a:hover, a:visited {
 
 blockquote>p {
     font-weight: 500;
-    font-style: italic;
     padding: 0.5em 5em 0.5em 10px;
     border-left: 10px solid #00ef6f;
 }
 
 pre, code {
-    font-family: Hack, monospace;
+    font-family: 'Hack', monospace;
     font-size: 1rem;
     min-width: 0;
     white-space : pre-wrap !important;
 }
 
 pre, code > span {
-    font-family: Hack, monospace;
+    font-family: 'Hack', monospace;
     font-size: 1rem;
     min-width: 0;
 }
@@ -167,11 +167,7 @@ pre, code > span {
 }
 
 .title-bar {
-    border-bottom-width: 0px;
-    border-bottom-style: solid;
     color: #00ef6f;
-    grid-area: header;
-    border-bottom-color: #00ef6f;
     text-decoration: none;
     margin-top: 2em;
 }
@@ -184,6 +180,7 @@ pre, code > span {
 .site-title a {
     color: #00ef6f;
     text-decoration: none;
+    font-weight: 200;
 }
 
 .title-bar nav {
@@ -203,7 +200,7 @@ pre, code > span {
 
 .singlearea h1 {
   margin-block-end: 0rem;
-}
+} 
 
 .title-area .date {
     font-size: 1em;
