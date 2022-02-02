@@ -1,8 +1,8 @@
 <div class = "paginator">
   {{ if .Paginator.HasPrev }}
-    <a class = "left" href="{{ .Paginator.Prev.URL }}">←Newer Posts</a>
+    <a class = "previous" href="{{ .Paginator.Prev.URL }}">←Newer Posts</a>
   {{ end }}
   {{ if .Paginator.HasNext }}
-    <a class="right" href="{{ .Paginator.Next.URL }}">Older Posts→</a>
+    <a class="next" href="{{ .Paginator.Next.URL }}">Older Posts→</a>
   {{ end }}
 </div>

@@ -25,6 +25,15 @@
         {{ .Content }}
       </div>
     </article>
+  <hr>
+  <div class = "paginator">
+    {{ with .Next }}
+      <a class="previous" href="{{ .Permalink }}">←Newer Posts</a>
+    {{ end }}
+    {{ with .Prev }}
+      <a class = "next" href="{{ .Permalink }}">Older Posts→</a>
+    {{ end }}
+    </div>
   </div>
 {{ end }}
 

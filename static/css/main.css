@@ -333,9 +333,6 @@ footer img {
     margin: auto;
 }
 
-.paginator {
-    margin: 2em 0 2em 0;
-}
 
 .twitter-tweet {
     text-align: center;
@@ -359,12 +356,6 @@ ul {
     font-weight: 300;
     line-height: 1.5;
     margin: 0.5rem;
-}
-
-footer {
-  border-top-width: 5px;
-  border-top-style: solid;
-  border-top-color: #00ef6f;
 }
 
 form {
@@ -401,6 +392,24 @@ input:is([type=button], input[type=submit], input[type=reset]) {
   grid-column-gap: 10px; 
   grid-row-gap: 10px; 
   grid-template-columns: 25% 25% 25% 25%;
+}
+
+.paginator {
+  display: flex;
+  justify-content: space-between; 
+  width: 60vw;
+  margin-left: 20vw;
+  max-width: 800px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.paginator>.previous {
+  text-align: left;
+}
+
+.paginator>.next {
+  text-align: right;
 }
 
 @media only screen 
