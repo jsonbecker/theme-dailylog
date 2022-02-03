@@ -82,6 +82,7 @@ nav {
     margin-right: 2rem;
     padding-left: 20vw;
     max-width: 800px;
+    width: 60vw;
 }
 
 nav>ul {
