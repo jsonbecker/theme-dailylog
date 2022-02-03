@@ -101,6 +101,7 @@ nav a {
 }
 
 article {
+  margin-top: 2rem;
   width: 60vw;
   margin-left: 20vw;
   max-width: 800px;
@@ -416,25 +417,21 @@ input:is([type=button], input[type=submit], input[type=reset]) {
   and (min-device-width: 320px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3), (max-device-width: 675px) { 
-    .site {
-        grid-template-areas: "header" "content" "footer";
-        grid-template-columns: 90%;
-        grid-auto-rows: auto 1fr auto;
-        justify-content: center;
-    }
     article {
-        grid-template-areas: "title" "post";
-        grid-template-columns: 100%;
-        grid-auto-rows: auto;
-    }
-    time {
-        float: left;
-    }
-    .post-content {
-        grid-area: post;
+      width: 95%;
+      margin: initial;
     }
     .title-area {
-      grid-area: title;
+       display: flex;
+       align-items: baseline;
+       justify-content: space-between;
+    }
+    .title-area .date {
+       padding: initial;
+       width: initial;
+       margin: initial;
+       position: initial;
+       display: flex;
     }
     nav {
           flex-direction: column;
@@ -451,4 +448,18 @@ input:is([type=button], input[type=submit], input[type=reset]) {
     grid-row-gap: 10px;
     grid-column-gap: 0px;
   }
+   p, ul, ol {
+       font-size: 1rem;
+       font-weight: 200;
+       line-height: 1.5;
+       color: #FFFFFF;
+       letter-spacing: initial; 
+   }
+
+    blockquote>p {
+        font-weight: 400;
+        padding: 0.1rem 0.1rem 0.1rem 10px;
+        border-left: 5px solid #00ef6f;
+    }
+
 }
