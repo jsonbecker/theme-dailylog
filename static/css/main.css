@@ -265,6 +265,11 @@ figure img {
     display: block;
 }
 
+img {
+  max-width: 100%
+  height: auto;
+}
+
 
 .bookshelf figcaption {
 	height: 100%;
