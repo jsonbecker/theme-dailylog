@@ -80,6 +80,8 @@ nav {
     align-items: baseline;
     margin-left: 2rem;
     margin-right: 2rem;
+    padding-left: 20vw;
+    max-width: 800px;
 }
 
 nav>ul {
@@ -118,8 +120,10 @@ article h2:first-child {
 
 .dateheader {
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 700;
     color: #00ef6f;
+    margin-left: 20vw;
+    text-decoration: overline;
 }
 
 * {
@@ -436,6 +440,9 @@ input:is([type=button], input[type=submit], input[type=reset]) {
        align-items: baseline;
        justify-content: space-between;
     }
+    .dateheader {
+      margin-left: initial;
+    }
     .title-area .date {
        padding: initial;
        width: initial;
@@ -444,7 +451,8 @@ input:is([type=button], input[type=submit], input[type=reset]) {
        display: flex;
     }
     nav {
-          flex-direction: column;
+       flex-direction: column;
+       padding-left: initial;
     }
     nav>ul {
     letter-spacing: 0px;
