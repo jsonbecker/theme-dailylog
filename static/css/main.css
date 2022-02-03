@@ -408,6 +408,10 @@ input:is([type=button], input[type=submit], input[type=reset]) {
   grid-column-gap: 10px; 
   grid-row-gap: 10px; 
   grid-template-columns: 25% 25% 25% 25%;
+  width: 60vw;
+  padding-left: 20vw;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .paginator {
@@ -428,34 +432,41 @@ input:is([type=button], input[type=submit], input[type=reset]) {
   text-align: right;
 }
 
+.photos-grid-container {
+  width: 60vw;
+  padding-left: 20vw;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3), (max-device-width: 675px) { 
-    article {
+  article {
       width: 95%;
       margin: initial;
-    }
-    .title-area {
+  }
+  .title-area {
        display: flex;
        align-items: baseline;
        justify-content: space-between;
-    }
-    .dateheader {
+  }
+  .dateheader {
       margin-left: initial;
-    }
-    .title-area .date {
+  }
+  .title-area .date {
        padding: initial;
        width: initial;
        margin: initial;
        position: initial;
        display: flex;
-    }
-    nav {
+  }
+  nav {
        flex-direction: column;
        padding-left: initial;
-    }
-    nav>ul {
+  }
+  nav>ul {
     letter-spacing: 0px;
     list-style: none;
     padding: 0;
@@ -466,19 +477,24 @@ input:is([type=button], input[type=submit], input[type=reset]) {
     justify-content: center;
     grid-row-gap: 10px;
     grid-column-gap: 0px;
+    padding-left: initial;
   }
-   p, ul, ol {
+
+  p, ul, ol {
        font-size: 1rem;
        font-weight: 200;
        line-height: 1.5;
        color: #FFFFFF;
        letter-spacing: initial; 
-   }
+  }
 
-    blockquote>p {
+  blockquote>p {
         font-weight: 400;
         padding: 0.1rem 0.1rem 0.1rem 10px;
         border-left: 5px solid #00ef6f;
-    }
+  }
 
+  .photos-grid-container {
+     padding-left: initial;
+  }
 }
