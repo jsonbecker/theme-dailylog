@@ -19,13 +19,11 @@
     </time>
 
     </div>
-    <hr class="dateline" />
     <article class = "h-entry">
       <div class = "post-content e-content">
         {{ .Content }}
       </div>
     </article>
-  <hr>
   <div class = "paginator">
     {{ with .Next }}
       <a class="previous" href="{{ .Permalink }}">←Newer Posts</a>
