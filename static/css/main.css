@@ -68,17 +68,12 @@ hr {
 }
 
 main {
-    /* sitewidth */
-    margin-top: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-left: 2rem;
     margin-right: 2rem;
     padding-left: 20vw;
     max-width: 800px;
@@ -482,8 +477,8 @@ input:is([type=button], input[type=submit], input[type=reset]) {
   }
 
   p, ul, ol {
-       font-size: 1rem;
-       font-weight: 200;
+       font-size: 1.1rem;
+       font-weight: 300;
        line-height: 1.5;
        color: #FFFFFF;
        letter-spacing: initial; 
