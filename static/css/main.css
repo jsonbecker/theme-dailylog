@@ -42,7 +42,7 @@ h4 {
 }
 
 pre {
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 p, ul, ol {
@@ -50,7 +50,7 @@ p, ul, ol {
     font-weight: 300;
     line-height: 1.5;
     color: #FFFFFF;
-    letter-spacing: 0.01rem; 
+    letter-spacing: 0.01rem;
 }
 
 table {
@@ -67,8 +67,7 @@ hr {
     border-color: #00ef6f;
 }
 
-main {
-}
+main {}
 
 nav {
     display: flex;
@@ -91,18 +90,18 @@ nav>ul>li {
 }
 
 nav a {
-  font-weight: 400;
-} 
+    font-weight: 400;
+}
 
 .day:not(:first-child) {
-  margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 article {
-  margin-top: 2rem;
-  width: 60vw;
-  margin-left: 20vw;
-  max-width: 800px;
+    margin-top: 2rem;
+    width: 60vw;
+    margin-left: 20vw;
+    max-width: 800px;
 }
 
 article p:first-child {
@@ -124,7 +123,7 @@ article h2:first-child {
 
 * {
     font-family: 'Manrope', sans-serif;
-    font-feature-settings: `'tnum' on`;
+    font-feature-settings: `'tnum'on`;
 }
 
 a {
@@ -146,10 +145,10 @@ pre, code {
     font-family: 'Hack', monospace;
     font-size: 1rem;
     min-width: 0;
-    white-space : pre-wrap !important;
+    white-space: pre-wrap !important;
 }
 
-pre, code > span {
+pre, code>span {
     font-family: 'Hack', monospace;
     font-size: 1rem;
     min-width: 0;
@@ -194,15 +193,15 @@ pre, code > span {
 }
 
 .singlearea {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-left: 20vw;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: 20vw;
 }
 
 .singlearea h1 {
-  margin-block-end: 0rem;
-} 
+    margin-block-end: 0rem;
+}
 
 .title-area .date {
     font-size: 1em;
@@ -256,8 +255,8 @@ figure {
 }
 
 .bookshelf figure {
-  min-height: 100px;
-  min-width: 100px;
+    min-height: 100px;
+    min-width: 100px;
 }
 
 figure img {
@@ -267,32 +266,32 @@ figure img {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 video {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 
 .bookshelf figcaption {
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	backface-visibility: hidden;
-	transform-origin: 0 0;
-	transform: rotateY(-90deg);
-	transition: transform 0.4s, opacity 0.1s 0.3s;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    transform: rotateY(-90deg);
+    transition: transform 0.4s, opacity 0.1s 0.3s;
     background-color: rgba(0, 0, 0, 0.75);
     text-align: center;
 }
 
 .bookshelf figure:hover figcaption {
     opacity: 1;
-	transform: rotateY(0deg);
-	transition: transform 0.4s, opacity 0.1s;
+    transform: rotateY(0deg);
+    transition: transform 0.4s, opacity 0.1s;
 }
 
 /** lightbox taken from http://codepen.io/gschier/pen/HCoqh **/
@@ -371,126 +370,129 @@ ul {
 }
 
 form {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 input:is([type=text]) {
-  border: none;
-  font-size: 1.125rem;
-  text-decoration: none;
-  margin: 4px 2px;
-  border-radius: 4px;
+    border: none;
+    font-size: 1.125rem;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 4px;
 }
 
 input:is([type=button], input[type=submit], input[type=reset]) {
-  background-color: #00ef6f;
-  border: none;
-  color: #343837;
-  font-size: 1.125rem;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
+    background-color: #00ef6f;
+    border: none;
+    color: #343837;
+    font-size: 1.125rem;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .bookshelf-book-cover {
-  border-radius: 5px; 
-  max-width: 100%; 
-  height: auto;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
 }
 
 .bookshelf {
-  display: grid; 
-  grid-column-gap: 10px; 
-  grid-row-gap: 10px; 
-  grid-template-columns: 25% 25% 25% 25%;
-  width: 60vw;
-  padding-left: 20vw;
-  margin-left: 2rem;
-  margin-right: 2rem;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 60vw;
+    padding-left: 20vw;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .paginator {
-  display: flex;
-  justify-content: space-between; 
-  width: 60vw;
-  margin-left: 20vw;
-  max-width: 800px;
-  margin-top: 2em;
-  margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    margin-left: 20vw;
+    max-width: 800px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .paginator>.previous {
-  text-align: left;
+    text-align: left;
 }
 
 .paginator>.next {
-  text-align: right;
+    text-align: right;
 }
 
 .photos-grid-container {
-  width: 60vw;
-  padding-left: 20vw;
-  margin-left: 2rem;
-  margin-right: 2rem;
+    width: 60vw;
+    padding-left: 20vw;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3), (max-device-width: 675px) { 
-  article {
-      width: 95%;
-      margin: initial;
-  }
-  .title-area {
-       display: flex;
-       align-items: baseline;
-       justify-content: space-between;
-  }
-  .dateheader {
-      margin-left: initial;
-  }
-  .title-area .date {
-       padding: initial;
-       width: initial;
-       margin: initial;
-       position: initial;
-       display: flex;
-  }
-  nav {
-       flex-direction: column;
-       padding-left: initial;
-  }
-  nav>ul {
-    letter-spacing: 0px;
-    list-style: none;
-    padding: 0;
-  }
-   .bookshelf {
-    display: grid;
-    grid-template-columns: 90%;
-    justify-content: center;
-    grid-row-gap: 10px;
-    grid-column-gap: 0px;
-    padding-left: initial;
-  }
+@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3), (max-device-width: 675px) {
+    article {
+        width: 95%;
+        margin: initial;
+    }
 
-  p, ul, ol {
-       font-size: 1.1rem;
-       font-weight: 300;
-       line-height: 1.5;
-       color: #FFFFFF;
-       letter-spacing: initial; 
-  }
+    .title-area {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
 
-  blockquote>p {
+    .dateheader {
+        margin-left: initial;
+    }
+
+    .title-area .date {
+        padding: initial;
+        width: initial;
+        margin: initial;
+        position: initial;
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        padding-left: initial;
+    }
+
+    nav>ul {
+        letter-spacing: 0px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .bookshelf {
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;
+        grid-row-gap: 10px;
+        grid-column-gap: 0px;
+        padding-left: initial;
+    }
+
+    p, ul, ol {
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #FFFFFF;
+        letter-spacing: initial;
+    }
+
+    blockquote>p {
         font-weight: 400;
         padding: 0.1rem 0.1rem 0.1rem 10px;
         border-left: 5px solid #00ef6f;
-  }
+    }
 
-  .photos-grid-container {
-     padding-left: initial;
-  }
+    .photos-grid-container {
+        padding-left: initial;
+    }
 }
