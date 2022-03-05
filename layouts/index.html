@@ -1,45 +1,40 @@
-{{ define "main" }}  
+{{ define "main" }}
 {{ $posts := where .Site.Pages "Type" "post" }}
 {{ $grouped := $posts.GroupByDate "2006-01-02" }}
 {{ $paginated := (.Paginate ($grouped)) }}
 <div class="content list h-feed">
   {{ range $paginated.PageGroups }}
-    {{ $thedate := (time .Key) }}
-    <div class="day">
-      <span class="dateheader"> 
-        {{ $thedate.Format "January 2, 2006" }}
-      </span>
-      {{ range .Pages.Reverse }}
-        {{ if eq .Type "post" }}
-          <article class = "h-entry">
-            <div class="title-area">
-              {{ if .Title }}
-                <h1 class = "p-name  post-title">
-                  <a class = "u-url" href = "{{ .Permalink }}">{{ .Title }}</a>
-                </h1>
-              {{ end }}
-              <time 
-                class = "date dt-published" 
-                datetime = "{{ .Date.Format "January 02, 2006 15:04:05  -0700" }}" 
-                {{ if not .Title }} 
-                  style="padding-top:0rem;"
-                {{ end }}>
-                <a class = "u-url"  
-                   href = "{{ .Permalink }}">
-                   {{ .Date.Format "3:04PM" }}
-                </a>
-              </time>
-            </div>
-            <div class = "post-content e-content">
-              {{ .Content }}
-            </div>
-          </article>
-      {{- end }}
+  {{ $thedate := (time .Key) }}
+  <div class="day">
+    <span class="dateheader">
+      {{ $thedate.Format "January 2, 2006" }}
+    </span>
+    {{ range .Pages.Reverse }}
+    {{ if eq .Type "post" }}
+    <article class="h-entry">
+      <div class="title-area">
+        {{ if .Title }}
+        <h1 class="p-name  post-title">
+          <a class="u-url" href="{{ .Permalink }}">{{ .Title }}</a>
+        </h1>
+        {{ end }}
+        <time class="date dt-published" 
+              datetime="{{ .Date.Format " January 02, 2006 15:04:05 -0700" }}" 
+              {{ if not .Title }} style="padding-top:0rem;" {{ end }}>
+          <a class="u-url" href="{{ .Permalink }}">
+            {{ .Date.Format "3:04PM" }}
+          </a>
+        </time>
+      </div>
+      <div class="post-content e-content">
+        {{ .Content }}
+      </div>
+    </article>
+    {{- end }}
     {{ end }}
-    </div>
+  </div>
   {{ end }}
 </div>
 <hr>
 {{ partial "paginator.html" . }}
 {{ end }}
-
