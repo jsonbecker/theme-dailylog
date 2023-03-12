@@ -203,19 +203,6 @@ code > span {
   text-decoration: none;
 }
 
-.singlearea {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-left: 20vw;
-  width: 60vw;
-  max-width: 800px;
-}
-
-.singlearea h1 {
-  margin-block-end: 0rem;
-}
-
 .title-area .date {
   font-size: 1em;
   font-weight: 400;
@@ -254,6 +241,12 @@ time > a:visited {
 
 .post-item .date {
   min-width: 100px;
+}
+
+.single-post-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
 h2 > a,
@@ -492,10 +485,6 @@ input:is([type="button"], input[type="submit"], input[type="reset"]) {
     grid-row-gap: 10px;
     grid-column-gap: 0px;
     padding-left: initial;
-  }
-  .singlearea {
-    margin-left: initial;
-    width: initial;
   }
   p,
   ul,
