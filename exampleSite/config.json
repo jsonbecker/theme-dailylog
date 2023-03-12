@@ -5,7 +5,10 @@
   "themesdir": "../..",
   "theme": "theme-dailylog",
   "paginate": 5,
-  "author": "Jason Becker",
+  "author": {
+    "name": "Jason Becker",
+    "avatar": "https://micro.blog/jsonbecker/avatar.jpg"
+  },
 
   "markup": {
     "highlight": {
@@ -28,6 +31,7 @@
     "github_username": "example",
     "instagram_username": "example",
     "bookshop_affiliate_id": "0000",
+    "mastodon_url": "https://indiweb.social/@jsonbecker",
     "contact": "example",
     "menu": [
       {
