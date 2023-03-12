@@ -3,6 +3,10 @@
 {{ $grouped := $posts.GroupByDate "2006-01-02" }}
 {{ $paginated := (.Paginate ($grouped)) }}
 <div class="content list h-feed">
+  <a href="/" class="u-author h-card">
+    <img src="{{ .Site.Author.avatar }}">
+      {{ .Site.Author.name }}
+  </a>
   {{ range $paginated.PageGroups }}
   {{ $thedate := (time .Key) }}
   <div class="day">

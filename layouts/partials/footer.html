@@ -2,15 +2,4 @@
   {{ range .Site.Params.plugins_js }}
     <script src="{{ . }}"></script>
   {{ end }}
-  <div class = "h-card">
-    <span class ="p-name p-author"> 
-      {{ .Params.author | default .Site.Author.name }}
-    </span>
-    <a class="u-url" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    {{ if isset .Site.Params "Contact" }}
-      <a class="u-email" 
-         href="mailto:{{ .Site.Params.Contact }}">{{ .Site.Params.Contact }}
-      </a>
-    {{ end }}
-  </div>
 </footer>
