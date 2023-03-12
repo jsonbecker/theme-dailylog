@@ -15,9 +15,11 @@
 		{{ end }}
     {{ with site.Menus.main }}
       {{ range . }}
-        <a class="{{ if eq .URL $url }}active{{ end }}" href="{{ .URL }}">
-          {{ .Name }}
-        </a>
+        <li>
+          <a class="{{ if eq .URL $url }}active{{ end }}" href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </li>
       {{ end }}
     {{ end }}
     {{ if .Site.Params.Contact }}
