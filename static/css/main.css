@@ -229,10 +229,6 @@ time > a {
   color: #696f70;
 }
 
-time > a:visited {
-  color: #696f70;
-}
-
 .title-area {
   display: flex;
   flex-direction: column;
