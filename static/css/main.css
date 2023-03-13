@@ -104,7 +104,7 @@ nav a {
   margin-top: 1.5rem;
 }
 
-article {
+.h-feed {
   margin-top: 2rem;
   width: 60vw;
   margin-left: 20vw;
@@ -124,7 +124,6 @@ article h2:first-child {
   font-size: 2rem;
   font-weight: 700;
   color: #00ef6f;
-  margin-left: 20vw;
   text-decoration: overline;
 }
 
