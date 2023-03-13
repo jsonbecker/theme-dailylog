@@ -2,16 +2,20 @@
  <div class="content list h-feed singlearea">
 {{$pages := where .Site.Pages "Type" "post" }}
   {{ range $pages.GroupByDate "2006" }}
-    <h2 class="year">
-      {{ .Key }}
-    </h2>
-    {{ range .Pages.GroupByDate "January" }}
-      <h3 class="month">
+    <div class="year">
+      <h2>
         {{ .Key }}
-      </h3>
-      {{ range .Pages }}
-        {{ partial "li.html" . }}
+      </h2>
+      {{ range .Pages.GroupByDate "January" }}
+        <div class="month">
+        <h3>
+          {{ .Key }}
+        </h3>
+        {{ range .Pages }}
+          {{ partial "li.html" . }}
+        {{ end }}
+        </div>
       {{ end }}
-    {{ end }}
+    </div>
   {{ end }}
 {{ end }}

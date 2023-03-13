@@ -1,11 +1,10 @@
 {{ if .Title }}
-<li class="post-item">
- 
+<div class="post-item">
    <div class = "date" style="color:#00ef6f;">{{ .Date.Format "Jan 02" }}</div>
    <a href="{{ .Permalink }}" class = "u-url">
       <div class = 'archive-title'>{{ .Title }}</div>
    </a>
-</li>
+</div>
 {{ else }}
 {{ end }}
 

@@ -226,11 +226,11 @@ code > span {
 }
 
 time > a {
-  color: #696F70; 
+  color: #696f70;
 }
 
 time > a:visited {
-  color: #696F70; 
+  color: #696f70;
 }
 
 .title-area {
@@ -409,10 +409,6 @@ input:is([type="button"], input[type="submit"], input[type="reset"]) {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   grid-template-columns: 25% 25% 25% 25%;
-  width: 60vw;
-  padding-left: 20vw;
-  margin-left: 2rem;
-  margin-right: 2rem;
 }
 
 .paginator {
