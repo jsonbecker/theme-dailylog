@@ -432,8 +432,12 @@ input:is([type="button"], input[type="submit"], input[type="reset"]) {
   margin-right: 2rem;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3),
-  (max-device-width: 675px) {
+@media only screen and (max-width: 800px) {
+
+  .h-feed { 
+    margin-left: 0;
+    width: 100%;
+  }
   article {
     width: 95%;
     margin: initial;
