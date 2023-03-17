@@ -80,10 +80,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  /*    margin-right: 2rem; */
-  padding-left: 20vw;
   max-width: 800px;
   width: 60vw;
+  margin: 0 auto;
 }
 
 nav > ul {
@@ -105,10 +104,15 @@ nav a {
 }
 
 .h-feed {
-  margin-top: 2rem;
   width: 60vw;
-  margin-left: 20vw;
   max-width: 800px;
+  margin: 2rem auto;
+}
+
+.group {
+  width: 60vw;
+  max-width: 800px;
+  margin: 2rem auto;
 }
 
 article p:first-child {
@@ -411,10 +415,9 @@ input:is([type="button"], input[type="submit"], input[type="reset"]) {
   display: flex;
   justify-content: space-between;
   width: 60vw;
-  margin-left: 20vw;
   max-width: 800px;
-  margin-top: 2em;
   margin-bottom: 2em;
+  margin: 2em auto;
 }
 
 .paginator > .previous {
@@ -435,8 +438,8 @@ input:is([type="button"], input[type="submit"], input[type="reset"]) {
 @media only screen and (max-width: 800px) {
 
   .h-feed { 
-    margin-left: 0;
     width: 100%;
+    margin: 0 auto;
   }
   article {
     width: 95%;
