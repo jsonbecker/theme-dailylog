@@ -1,0 +1,82 @@
+{{ define "main" }}
+  {{ if eq .Data.Term "now" }}
+    {{ range last 1 .Data.Pages.ByDate }}
+       <div class="content list h-feed">
+    <a href="/" class="u-author h-card">
+      <img src="{{ .Site.Author.avatar }}">
+      {{ .Site.Author.name }}
+    </a>
+    <article class="h-entry">
+      <div class="single-post-title">
+        <h1 class = "p-name  post-title">
+          <a class= "u-url" href= "{{ .Permalink }}">
+            {{ if .Title }}
+              {{ .Title }}
+            {{ else }}
+              {{ .Date.Format "January 2, 2006" }}
+            {{ end }}
+          </a>
+        </h1>
+        <time
+          class = "date dt-published"
+          datetime = "{{ .Date.Format "January 02, 2006 15:04:05  -0700" }}" >
+          <a class = "u-url" href= "{{ .Permalink }}">
+            {{ .Date.Format "3:04PM" }}
+          </a>
+        </time>
+      </div>
+      <div class = "post-content e-content">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+    {{ end }}
+  {{ else }}
+
+{{ $grouped := .Data.Pages.GroupByDate "2006-01-02" }}
+{{ $paginated := (.Paginate ($grouped)) }}
+   <div class="content list h-feed">
+  <a href="/" class="u-author h-card">
+    <img src="{{ .Site.Author.avatar }}">
+      {{ .Site.Author.name }}
+  </a>
+  {{ range $paginated.PageGroups }}
+  {{ $thedate := (time .Key) }}
+  <div class="day">
+    <span class="dateheader">
+      {{ $thedate.Format "January 2, 2006" }}
+    </span>
+    {{ range .Pages.Reverse }}
+    {{ if eq .Type "post" }}
+    <article class="h-entry">
+      <div class="title-area">
+        {{ if .Title }}
+        <h1 class="p-name  post-title">
+          <a class="u-url" href="{{ .Permalink }}">{{ .Title }}</a>
+        </h1>
+        {{ end }}
+        <time class="date dt-published"
+              datetime="{{ .Date.Format " January 02, 2006 15:04:05 -0700" }}"
+              {{ if not .Title }} style="padding-top:0rem;" {{ end }}>
+          <a class="u-url" href="{{ .Permalink }}">
+            {{ .Date.Format "3:04PM" }}
+          </a>
+        </time>
+      </div>
+      <div class="post-content e-content">
+        {{ .Content }}
+      </div>
+    </article>
+    {{- end }}
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+<hr>
+ {{ partial "paginator.html" . }}
+
+{{ end }}
+{{ end }}
+
+
+
